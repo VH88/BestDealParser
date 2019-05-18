@@ -42,16 +42,18 @@ class BaseActions {
         driver = new FirefoxDriver(options);
         wait = new WebDriverWait(driver, config.getWebDriveWait());
         driver.manage().timeouts().implicitlyWait(config.getWebDriveTimeout() ,TimeUnit.SECONDS);
+        driver.manage().window().maximize();
     }
 
     protected static void initializeChrome(boolean isHeadless){
-        System.setProperty("webdriver.gecko.driver", "drivers//chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "drivers//chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--user-agent=Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36");
         options.setHeadless(isHeadless);
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, config.getWebDriveWait());
         driver.manage().timeouts().implicitlyWait(config.getWebDriveTimeout() ,TimeUnit.SECONDS);
+        driver.manage().window().maximize();
     }
 
 

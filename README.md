@@ -38,7 +38,7 @@ To make your own template look for template specific keywords inside curly brack
 2. Open in your favorite Java IDE.
 
 - If you will be using chrome browser with the version different from 74.0 [download chromedriver for your version](http://chromedriver.chromium.org/downloads) and put it into /drivers directory of this project. 
-- If you will be using firefox browser with the version different from 65.0 [download geckodriver for your version](https://github.com/mozilla/geckodriver/releases) and put it into /drivers directory of this project.
+- If you will be using firefox browser with the version different from 66.0 [download geckodriver for your version](https://github.com/mozilla/geckodriver/releases) and put it into /drivers directory of this project.
 
 
 # Author
