@@ -41,7 +41,7 @@ class BaseActions {
 
         driver = new FirefoxDriver(options);
         wait = new WebDriverWait(driver, config.getWebDriveWait());
-        driver.manage().timeouts().implicitlyWait(config.getGetWebDriveTimeout() ,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(config.getWebDriveTimeout() ,TimeUnit.SECONDS);
     }
 
     protected static void initializeChrome(boolean isHeadless){
@@ -51,7 +51,7 @@ class BaseActions {
         options.setHeadless(isHeadless);
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, config.getWebDriveWait());
-        driver.manage().timeouts().implicitlyWait(config.getGetWebDriveTimeout() ,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(config.getWebDriveTimeout() ,TimeUnit.SECONDS);
     }
 
 

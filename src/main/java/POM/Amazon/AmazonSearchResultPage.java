@@ -144,7 +144,7 @@ public class AmazonSearchResultPage extends BasePage {
             }
         }
 
-        driver.manage().timeouts().implicitlyWait(config.getGetWebDriveTimeout(), TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(config.getWebDriveTimeout(), TimeUnit.SECONDS);
     }
 
 

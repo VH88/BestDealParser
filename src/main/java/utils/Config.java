@@ -14,7 +14,8 @@ public class Config {
     private static JSONObject amazon;
     private static int webDriveWait;
     private static int webDriveTimeout;
-
+    private static boolean webDriverIsHeadless;
+    //TODO: put json config into variables
     public Config() throws IOException, ParseException {
         Object obj = null;
         obj = new JSONParser().parse(new FileReader("config//settings.json"));
@@ -26,9 +27,11 @@ public class Config {
         JSONObject webDriver = (JSONObject) jo.get("webdriver");
         long _webDriveWait = (long) webDriver.get("wait");
         long _webDriveTimeout = (long)webDriver.get("timeout");
+        boolean _webDriverIsHeadless = (boolean) webDriver.get("isHeadless");
 
         webDriveWait = (int)_webDriveWait;
         webDriveTimeout = (int) _webDriveTimeout;
+        webDriverIsHeadless = _webDriverIsHeadless;
 
     }
 
@@ -47,7 +50,8 @@ public class Config {
     }
 
     public int getWebDriveWait(){return webDriveWait;}
-    public int getGetWebDriveTimeout(){return webDriveTimeout;}
+    public int getWebDriveTimeout(){return webDriveTimeout;}
+    public boolean getWebDriverIsHeadless(){return webDriverIsHeadless;}
 
     private static By stringToBy(String type, String locator){
         if(type.equals("id")){
