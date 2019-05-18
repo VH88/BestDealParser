@@ -2,7 +2,7 @@
    "webdriver":{  
       "timeout":2,
       "wait":5,
-      "isHeadless": false
+      "isHeadless": true
    },
    "locators":{  
       "amazon":{  

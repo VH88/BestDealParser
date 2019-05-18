@@ -36,7 +36,7 @@ class BaseActions {
 
         FirefoxOptions options = new FirefoxOptions();
         // Pretend we're legit browser
-        options.addPreference("general.useragent.override", "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:65.0) Gecko/20100101 Firefox/65.0");
+        options.addPreference("general.useragent.override", "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0");
         options.setHeadless(isHeadless);
 
         driver = new FirefoxDriver(options);
